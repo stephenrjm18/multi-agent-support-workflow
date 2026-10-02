@@ -1,0 +1,21 @@
+| Phase  | Focus                           |
+| ------ | ------------------------------- |
+| **0**  | Architecture & scope            |
+| **1**  | Project setup + FastAPI         |
+| **2**  | SQLite + SQLAlchemy + seed data |
+| **3**  | LLM abstraction + Ollama        |
+| **4**  | LangGraph fundamentals          |
+| **5**  | Triage Agent                    |
+| **6**  | Investigation Agent + tools     |
+| **7**  | Resolution Agent                |
+| **8**  | Human-in-the-Loop               |
+| **9**  | QA Agent                        |
+| **10** | Self-correction/rework          |
+| **11** | Response Agent                  |
+| **12** | FastAPI workflow integration    |
+| **13** | Next.js frontend                |
+| **14** | Testing + evaluation            |
+| **15** | Deployment                      |
+| **16** | GitHub + README                 |
+| **17** | Resume update                   |
+| **18** | Interview preparation           |
