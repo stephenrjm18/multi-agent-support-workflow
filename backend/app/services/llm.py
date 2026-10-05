@@ -9,11 +9,11 @@ load_dotenv()
 
 
 def get_llm():
-    provider = os.getenv("LLM_PROVIDER", "ollama").lower()
+    provider = os.getenv("LLM_PROVIDER", "gemini").lower()
 
     if provider == "ollama":
         return ChatOllama(
-            model=os.getenv("OLLAMA_MODEL", "qwen2.5:1.5b "),
+            model=os.getenv("OLLAMA_MODEL", "qwen2.5:1.5b"),
             temperature=0,
         )
 

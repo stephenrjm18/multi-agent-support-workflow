@@ -147,3 +147,46 @@ def get_payment(order_id: int) -> dict[str, Any]:
 
     finally:
         db.close()
+
+def check_refund_eligibility(order_id: int) -> dict:
+    """
+    Check whether an order is eligible for a refund.
+
+    This function performs deterministic business-rule validation.
+    It does not use an LLM.
+    """
+
+    order = get_order(order_id)
+
+    if not order:
+        return {
+            "eligible": False,
+            "reason": "Order not found.",
+        }
+
+    order_data = order.get("order")
+
+    if not order_data:
+        return {
+            "eligible": False,
+            "reason": "Order information is unavailable.",
+        }
+
+    status = order_data.get("status")
+
+    if status == "cancelled":
+        return {
+            "eligible": True,
+            "reason": "Cancelled orders are eligible for a refund.",
+        }
+
+    if status == "delivered":
+        return {
+            "eligible": True,
+            "reason": "Delivered orders are eligible for a refund.",
+        }
+
+    return {
+        "eligible": False,
+        "reason": f"Order with status '{status}' is not eligible for a refund.",
+    }
