@@ -3,6 +3,7 @@ from uuid import uuid4
 from fastapi import FastAPI, HTTPException
 
 from langgraph.types import Command
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.graph.workflow import build_graph
 from app.schemas import (
@@ -21,6 +22,17 @@ app = FastAPI(
         "API for the Multi-Agent Customer Support "
         "Automation & Operations Platform."
     ),
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

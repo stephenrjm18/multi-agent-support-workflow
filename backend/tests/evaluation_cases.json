@@ -1,0 +1,44 @@
+[
+  {
+    "id": "refund_001",
+    "category": "refund",
+    "user_request": "I want a refund for my order",
+    "customer_id": 1,
+    "expected_issue_type": "refund"
+  },
+  {
+    "id": "refund_002",
+    "category": "refund",
+    "user_request": "Can I get my money back for my purchase?",
+    "customer_id": 1,
+    "expected_issue_type": "refund"
+  },
+  {
+    "id": "delivery_001",
+    "category": "delivery",
+    "user_request": "Where is my order? It has not arrived yet.",
+    "customer_id": 1,
+    "expected_issue_type": "delivery"
+  },
+  {
+    "id": "delivery_002",
+    "category": "delivery",
+    "user_request": "My package is delayed. Can you check it?",
+    "customer_id": 1,
+    "expected_issue_type": "delivery"
+  },
+  {
+    "id": "general_001",
+    "category": "general",
+    "user_request": "Can you help me with my account?",
+    "customer_id": 1,
+    "expected_issue_type": "general"
+  },
+  {
+    "id": "general_002",
+    "category": "general",
+    "user_request": "I have a question about my account.",
+    "customer_id": 1,
+    "expected_issue_type": "general"
+  }
+]
